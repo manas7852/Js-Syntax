@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Syntax</title>
+</head>
+<body>
+    <script>
+        // Without Template Literal
+        console,console.log("List Of Fruits \nApple\nOrange\nMango");
+
+        // With Template Literal
+        console.log(`List Of Fruits
+        Apple
+        Orange
+        Mango`);
+
+        // Expression
+        let p = 1000;
+        let  n = 3;
+        let r = 7
+        let simpleIntrest = () =>{
+            return (p * n * r) / 100
+        }
+        console.log(`Simple Intrest is ` + simpleIntrest())
+
+        // Taged Literal
+        function tagedLiteralEg (strings){
+            document.write(strings)
+        }
+        tagedLiteralEg(`Hello JavaScript`)
+
+        // Strings.raw
+        let a = String.raw`Value Of Expression is ${2+3}`;
+        document.write("<br>" + a)
+        
+        // Nested Template
+        let maximum = (x,y,z) =>{
+            var c = `Value ${(y > x && y > z) ? 'y is greater' : `${x > z ? 'x is greater' : 'z is greater'}`}`
+            return c
+        }
+        document.write("<br>" + maximum(2,5,10)); 
+        document.write("<br>" + maximum(12,10,8)); 
+        document.write("<br>" + maximum(11,21,1)) 
+    </script>
+</body>
+</html>
